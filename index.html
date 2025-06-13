@@ -5,53 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            transition: background-color 0.3s, color 0.3s; /* Transição suave para modo escuro */
-        }
-
-        /* Modo claro */
-        body.light-mode {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* Modo escuro */
-        body.dark-mode {
-            background-color: #181818;
-            color: #f4f4f4;
         }
 
         /* Cabeçalho */
         .header {
             background-color: #28a745; /* Cor verde */
             color: white;
-            padding: 20px 0;
-            width: 100%;
+            padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
             align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
         }
 
         .header img {
-            max-height: 50px;
+            max-height: 50px; /* Ajuste do tamanho das imagens */
         }
 
         .header .entrar {
-            margin-left: auto;
+            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
         }
 
         .entrar img {
-            width: 120px;
+            width: 120px; /* Tamanho menor para o botão */
             height: 40px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -61,59 +44,92 @@
             transform: scale(1.05);
         }
 
-        .header .developer {
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            color: white;
-            margin-top: 5px;
-        }
-
         /* Seção de conteúdo */
         .content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 100px 20px;
-            flex-grow: 1;
+            padding: 80px 20px; /* Aumentei o padding superior para dar mais altura */
+            flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
         }
 
-        /* Seção de cada categoria */
-        .section {
-            background-color: #e9ecef;
-            padding: 20px 15px;
+        /* Seção Rodeios */
+        .rodeios {
+            background-color: #e9ecef; /* Cor de fundo clara */
+            padding: 40px 20px;
             width: 100%;
             text-align: center;
             font-size: 16px;
             color: #333;
-            margin-top: 20px;
-            transition: background-color 0.3s;
+            margin-top: 40px;
         }
 
-        /* Títulos das seções */
-        .section h2 {
+        .rodeios h2 {
+            color: #28a745; /* Verde para título */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .rodeios p {
+            line-height: 1.8;
+        }
+
+        /* Seção Palestras */
+        .palestras {
+            background-color: #e9ecef; /* Cor de fundo clara */
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .palestras h2 {
+            color: #28a745; /* Verde para título */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .palestras p {
+            line-height: 1.8;
+        }
+
+        /* Seção Sobre Nós */
+        .about-us {
+            background-color: #e9ecef; /* Cor de fundo clara */
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .about-us h2 {
             color: #28a745;
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-        .section p {
-            line-height: 1.6;
+        .about-us p {
+            line-height: 1.8;
         }
 
         /* Rodapé */
         .footer {
-            background-color: #333;
+            background-color: #333; /* Cor de fundo escuro */
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             position: relative;
             width: 100%;
             bottom: 0;
+            margin-top: 40px;
         }
 
         .footer a {
-            color: #28a745;
+            color: #28a745; /* Cor verde para links */
             text-decoration: none;
             margin: 0 10px;
         }
@@ -124,13 +140,18 @@
 
         /* Ícones no rodapé */
         .footer .social-icons {
-            margin-top: 15px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Alinha os ícones ao centro */
+        }
+
+        .footer .social-icons a {
+            margin: 0 15px; /* Espaçamento entre os ícones */
         }
 
         .footer .social-icons img {
-            width: 20px;
-            height: 20px;
-            margin: 0 10px;
+            width: 25px; /* Tamanho dos ícones */
+            height: 25px;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -138,26 +159,9 @@
         .footer .social-icons img:hover {
             transform: scale(1.2);
         }
-
-        /* Botão para alternar entre os modos */
-        .mode-toggle {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .mode-toggle:hover {
-            background-color: #218838;
-        }
     </style>
 </head>
-<body class="light-mode">
+<body>
 
     <!-- Cabeçalho -->
     <div class="header">
@@ -172,38 +176,42 @@
         </a>
     </div>
 
-    <!-- Texto de Desenvolvedor -->
-    <div class="header developer">
-        <p>Desenvolvido por João Pedro Sperafico Rickli</p>
+    <!-- Conteúdo -->
+    <div class="content">
+        <!-- A seção de imagens 1, 2, 3 e 4 foi removida -->
     </div>
 
-    <!-- Botão para alternar entre modos -->
-    <div class="content">
-        <button class="mode-toggle" onclick="toggleMode()">Modo Escuro</button>
-        
-        <!-- Seção Rodeios -->
-        <div class="section">
-            <h2>Rodeios</h2>
-            <p>
-                Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo.
-            </p>
-        </div>
+    <!-- Seção Rodeios -->
+    <div class="rodeios">
+        <h2>Rodeios</h2>
+        <p>
+            Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo. No Brasil, essa tradição está profundamente enraizada, refletindo a paixão por cavalos, bois e pela vida no interior, onde coragem e habilidade se encontram em um espetáculo emocionante que atrai milhares de pessoas a cada temporada.
+        </p>
+        <p>
+            Com uma agenda repleta de rodeios, o Brasil se transforma em um grande palco de adrenalina e emoção, onde as montarias em touros e cavalos são apenas a ponta do iceberg. Além das competições, esses eventos são uma festa de confraternização, música, danças típicas e gastronomia, criando uma atmosfera vibrante que reúne toda a família. O rodeio é, sem dúvida, uma das expressões mais autênticas da cultura brasileira, unindo tradição e modernidade em cada cidade que recebe essas grandes festas.
+        </p>
+    </div>
 
-        <!-- Seção Palestras -->
-        <div class="section">
-            <h2>Palestras</h2>
-            <p>
-                O agronegócio brasileiro é um dos maiores pilares da economia nacional, e, para manter-se competitivo e inovador, é fundamental que os profissionais da área busquem constante atualização e aprendizado.
-            </p>
-        </div>
+    <!-- Seção Palestras -->
+    <div class="palestras">
+        <h2>Palestras</h2>
+        <p>
+            O agronegócio brasileiro é um dos maiores pilares da economia nacional, e, para manter-se competitivo e inovador, é fundamental que os profissionais da área busquem constante atualização e aprendizado. Nesse cenário, as palestras do agronegócio desempenham um papel essencial. Elas oferecem uma oportunidade única para discutir as tendências, inovações tecnológicas, práticas sustentáveis e desafios enfrentados pelo setor. Além disso, são um ponto de encontro para profissionais, empresários, pesquisadores e especialistas que desejam compartilhar conhecimentos e experiências, contribuindo para o fortalecimento de um dos maiores segmentos econômicos do Brasil.
+        </p>
+    </div>
 
-        <!-- Seção Sobre Nós -->
-        <div class="section">
-            <h2>Sobre Nós</h2>
-            <p>
-                O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil, com informações sobre feiras, congressos, workshops, palestras e outros eventos.
-            </p>
-        </div>
+    <!-- Seção Sobre Nós -->
+    <div class="about-us">
+        <h2>Sobre Nós</h2>
+        <p>
+            O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil. Com uma cobertura completa e atualizada, nosso site traz informações sobre feiras, congressos, workshops, palestras e outros eventos do universo agrícola que acontecem em todo o território nacional.
+        </p>
+        <p>
+            Se você é profissional do agro, empreendedor, estudante ou simplesmente tem interesse por inovação e sustentabilidade no campo, aqui é o lugar certo! O Agro Eventos oferece uma visão detalhada de cada evento, com programação, locais, palestrantes e detalhes para facilitar a sua participação.
+        </p>
+        <p>
+            Nosso objetivo é aproximar você das oportunidades que o setor agropecuário oferece, além de promover o networking e o compartilhamento de conhecimento entre profissionais de todas as áreas do agro. Se você quer ficar por dentro do que acontece no Brasil, o Agro Eventos é o seu ponto de encontro!
+        </p>
     </div>
 
     <!-- Rodapé -->
@@ -217,48 +225,16 @@
 
         <!-- Ícones das redes sociais no rodapé -->
         <div class="social-icons">
-            <a href="https://twitter.com" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com/rickli.png/" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a> <!-- Link do Instagram atualizado -->
-            <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
+            <!-- Link atualizado para o perfil do Twitter -->
+            <a href="https://x.com/rickli_jao?t=IM4z4Xfws875rFDs9ZiVcQ&s=09" target="_blank">
+                <img src="img/Twitter.png" alt="Twitter">
+            </a>
+            <!-- Link do Instagram atualizado -->
+            <a href="https://www.instagram.com/rickli/" target="_blank">
+                <img src="img/Instagram.png" alt="Instagram">
+            </a>
         </div>
     </div>
-
-    <script>
-        // Função para alternar entre modo claro e escuro
-        function toggleMode() {
-            const body = document.body;
-            const button = document.querySelector('.mode-toggle');
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                button.textContent = "Modo Claro"; // Alterar texto do botão
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                button.textContent = "Modo Escuro"; // Alterar texto do botão
-            }
-        }
-    </script>
-
-    <!-- Rodapé -->
-<div class="footer">
-    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
-    <p>
-        <a href="#">Termos de Uso</a> | 
-        <a href="#">Política de Privacidade</a> |
-        <a href="#">Contato</a>
-    </p>
-
-    <!-- Ícones das redes sociais no rodapé -->
-    <div class="social-icons">
-        <!-- Link atualizado para o perfil do Twitter -->
-        <a href="https://x.com/rickli_jao?t=IM4z4Xfws875rFDs9ZiVcQ&s=09" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
-        <!-- Link do Instagram atualizado -->
-        <a href="https://www.instagram.com/rickli/" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a> 
-        <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
-    </div>
-</div>
-
 
 </body>
 </html>
