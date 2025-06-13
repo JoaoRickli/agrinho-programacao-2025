@@ -124,6 +124,23 @@
         .about-us p {
             line-height: 1.8;
         }
+
+        /* Estilo dos ícones no rodapé */
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+
+        .footer .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .footer .social-icons img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -179,6 +196,13 @@
             <a href="#">Política de Privacidade</a> |
             <a href="#">Contato</a>
         </p>
+
+        <!-- Ícones das redes sociais no rodapé -->
+        <div class="social-icons">
+            <a href="#" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
+            <a href="#" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
+        </div>
     </div>
 
 </body>
