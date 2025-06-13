@@ -5,40 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            transition: background-color 0.3s, color 0.3s; /* Transição suave para modo escuro */
+        }
+
+        /* Modo claro */
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Modo escuro */
+        body.dark-mode {
+            background-color: #181818;
+            color: #f4f4f4;
         }
 
         /* Cabeçalho */
         .header {
             background-color: #28a745; /* Cor verde */
             color: white;
-            padding: 20px 0; /* Aumentar o padding vertical */
-            width: 100%; /* Garantir que ocupe toda a largura da tela */
+            padding: 20px 0;
+            width: 100%;
             display: flex;
-            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
+            justify-content: space-between;
             align-items: center;
-            position: fixed; /* Fixar o cabeçalho no topo */
-            top: 0; /* Fixa na parte superior */
+            position: fixed;
+            top: 0;
             left: 0;
-            z-index: 1000; /* Coloca o cabeçalho acima dos outros elementos */
+            z-index: 1000;
         }
 
         .header img {
-            max-height: 50px; /* Ajuste do tamanho das imagens */
+            max-height: 50px;
         }
 
         .header .entrar {
-            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
+            margin-left: auto;
         }
 
         .entrar img {
-            width: 120px; /* Tamanho menor para o botão */
+            width: 120px;
             height: 40px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -61,44 +74,46 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 100px 20px; /* Aumentar o padding superior para compensar o cabeçalho fixo */
+            padding: 100px 20px;
             flex-grow: 1;
         }
 
-        /* Seção Rodeios, Palestras e Sobre Nós */
+        /* Seção de cada categoria */
         .section {
             background-color: #e9ecef;
-            padding: 20px 15px; /* Menor padding */
+            padding: 20px 15px;
             width: 100%;
             text-align: center;
             font-size: 16px;
             color: #333;
             margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
+        /* Títulos das seções */
         .section h2 {
-            color: #28a745; /* Verde para título */
-            font-size: 20px; /* Menor tamanho de título */
+            color: #28a745;
+            font-size: 20px;
             margin-bottom: 15px;
         }
 
         .section p {
-            line-height: 1.6; /* Reduzindo a altura da linha */
+            line-height: 1.6;
         }
 
         /* Rodapé */
         .footer {
-            background-color: #333; /* Cor de fundo escuro */
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px; /* Menor padding no rodapé */
+            padding: 15px;
             position: relative;
             width: 100%;
             bottom: 0;
         }
 
         .footer a {
-            color: #28a745; /* Cor verde para links */
+            color: #28a745;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -113,7 +128,7 @@
         }
 
         .footer .social-icons img {
-            width: 20px; /* Tamanho menor dos ícones */
+            width: 20px;
             height: 20px;
             margin: 0 10px;
             cursor: pointer;
@@ -123,9 +138,26 @@
         .footer .social-icons img:hover {
             transform: scale(1.2);
         }
+
+        /* Botão para alternar entre os modos */
+        .mode-toggle {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .mode-toggle:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
 
     <!-- Cabeçalho -->
     <div class="header">
@@ -145,8 +177,10 @@
         <p>Desenvolvido por João Pedro Sperafico Rickli</p>
     </div>
 
-    <!-- Conteúdo -->
+    <!-- Botão para alternar entre modos -->
     <div class="content">
+        <button class="mode-toggle" onclick="toggleMode()">Modo Escuro</button>
+        
         <!-- Seção Rodeios -->
         <div class="section">
             <h2>Rodeios</h2>
@@ -188,6 +222,23 @@
             <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
         </div>
     </div>
+
+    <script>
+        // Função para alternar entre modo claro e escuro
+        function toggleMode() {
+            const body = document.body;
+            const button = document.querySelector('.mode-toggle');
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                button.textContent = "Modo Claro"; // Alterar texto do botão
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = "Modo Escuro"; // Alterar texto do botão
+            }
+        }
+    </script>
 
 </body>
 </html>
