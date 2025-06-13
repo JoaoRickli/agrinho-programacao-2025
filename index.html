@@ -10,6 +10,9 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            min-height: 100vh; /* Garante que o corpo da página tenha uma altura mínima igual à altura da tela */
+            display: flex;
+            flex-direction: column;
         }
 
         /* Cabeçalho */
@@ -46,7 +49,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px; /* Aumentei o padding para dar mais espaço */
+            flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
         }
 
         /* Imagens de redes sociais */
