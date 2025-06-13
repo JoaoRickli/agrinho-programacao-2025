@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rodeios no Brasil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,51 +11,35 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
-        /* Cabeçalho */
-        .header {
+        /* Título da seção */
+        .section-title {
             background-color: #28a745; /* Cor verde */
             color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
-            align-items: center;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
         }
 
-        .header img {
-            max-height: 50px; /* Ajuste do tamanho das imagens */
-        }
-
-        .header .entrar {
-            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
-        }
-
-        .entrar img {
-            width: 120px; /* Tamanho menor para o botão */
-            height: 40px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .entrar img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Seção de conteúdo */
         .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 80px 20px; /* Aumentei o padding superior para dar mais altura */
-            flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #333;
         }
 
-        /* Rodapé */
+        .content h3 {
+            color: #28a745;
+            margin-top: 20px;
+        }
+
+        .content p {
+            line-height: 1.8;
+        }
+
         .footer {
-            background-color: #333; /* Cor de fundo escuro */
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
@@ -66,7 +50,7 @@
         }
 
         .footer a {
-            color: #28a745; /* Cor verde para links */
+            color: #28a745;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -74,77 +58,53 @@
         .footer a:hover {
             text-decoration: underline;
         }
-
-        /* Seção Sobre Nós */
-        .about-us {
-            background-color: #e9ecef; /* Cor de fundo clara */
-            padding: 40px 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            color: #333;
-            margin-top: 40px;
-        }
-
-        .about-us h2 {
-            color: #28a745;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .about-us p {
-            line-height: 1.8;
-        }
-
-        /* Ícones no rodapé */
-        .footer .social-icons {
-            margin-top: 20px;
-        }
-
-        .footer .social-icons img {
-            width: 25px; /* Tamanho menor */
-            height: 25px;
-            margin: 0 15px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .footer .social-icons img:hover {
-            transform: scale(1.2);
-        }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <div class="header">
-        <div class="logo-slogan">
-            <img src="img/Logo.png" alt="Logo">
-            <img src="img/Slogan.png" alt="Slogan">
-        </div>
-        
-        <!-- Botão "Entrar" -->
-        <a href="#" class="entrar">
-            <img src="img/Entrar.png" alt="Entrar">
-        </a>
+    <!-- Título da seção -->
+    <div class="section-title">
+        Rodeios no Brasil: A Tradição que Celebra o Espírito do Sertão
     </div>
 
-    <!-- Conteúdo -->
+    <!-- Conteúdo da seção -->
     <div class="content">
-        <!-- A seção de imagens 1, 2, 3 e 4 foi removida -->
-    </div>
+        <p>
+            Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo. No Brasil, essa tradição está profundamente enraizada, refletindo a paixão por cavalos, bois e pela vida no interior, onde coragem e habilidade se encontram em um espetáculo emocionante que atrai milhares de pessoas a cada temporada.
+        </p>
 
-    <!-- Seção Sobre Nós -->
-    <div class="about-us">
-        <h2>Sobre Nós</h2>
         <p>
-            O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil. Com uma cobertura completa e atualizada, nosso site traz informações sobre feiras, congressos, workshops, palestras e outros eventos do universo agrícola que acontecem em todo o território nacional.
+            Com uma agenda repleta de rodeios, o Brasil se transforma em um grande palco de adrenalina e emoção, onde as montarias em touros e cavalos são apenas a ponta do iceberg. Além das competições, esses eventos são uma festa de confraternização, música, danças típicas e gastronomia, criando uma atmosfera vibrante que reúne toda a família. O rodeio é, sem dúvida, uma das expressões mais autênticas da cultura brasileira, unindo tradição e modernidade em cada cidade que recebe essas grandes festas.
         </p>
+
+        <h3>Os Principais Rodeios de 2025 no Brasil</h3>
+        <ul>
+            <li><strong>Rodeio de Barretos (SP)</strong> - Considerado o "maior rodeio da América Latina", atrai milhares de turistas todos os anos.</li>
+            <li><strong>Rodeio de Jaguariúna (SP)</strong> - Um dos maiores e mais tradicionais, com rodeio em cavalos, laços e shows sertanejos.</li>
+            <li><strong>Rodeio de Avaré (SP)</strong> - Famoso pela estrutura e programação recheada de rodeios e shows.</li>
+            <li><strong>Rodeio de Americana (SP)</strong> - Atrai grande público com montarias e shows de música sertaneja.</li>
+            <li><strong>Rodeio de São João Nepomuceno (MG)</strong> - Um dos maiores eventos em Minas Gerais, com montarias e shows musicais.</li>
+            <li><strong>Rodeio de Ponta Grossa (PR)</strong> - Com competições emocionantes e estrutura grandiosa, é destaque no Paraná.</li>
+            <li><strong>Rodeio de Dourados (MS)</strong> - Em Mato Grosso do Sul, reúne competidores de todo o Brasil.</li>
+            <li><strong>Rodeio de Rio Verde (GO)</strong> - Destaca-se pelas disputas acirradas e shows de sertanejo.</li>
+        </ul>
+
+        <h3>Por Que Participar de um Rodeio?</h3>
         <p>
-            Se você é profissional do agro, empreendedor, estudante ou simplesmente tem interesse por inovação e sustentabilidade no campo, aqui é o lugar certo! O Agro Eventos oferece uma visão detalhada de cada evento, com programação, locais, palestrantes e detalhes para facilitar a sua participação.
+            Participar de um rodeio é embarcar em uma experiência única, que mistura emoção, tradição e cultura popular. Seja você um fã de esportes radicais ou apenas alguém que aprecia a festa e o estilo de vida do campo, os rodeios têm algo a oferecer. A emoção das montarias em touros e cavalos, o cheiro de terra e a vibração da música sertaneja, o calor da competição e o orgulho do povo interiorano fazem de cada rodeio uma experiência inesquecível.
         </p>
+
         <p>
-            Nosso objetivo é aproximar você das oportunidades que o setor agropecuário oferece, além de promover o networking e o compartilhamento de conhecimento entre profissionais de todas as áreas do agro. Se você quer ficar por dentro do que acontece no Brasil, o Agro Eventos é o seu ponto de encontro!
+            Além disso, os rodeios são uma excelente oportunidade para conhecer novas pessoas, fazer networking e até mesmo explorar novas oportunidades de negócios, já que muitas dessas festas incluem feiras de produtos agropecuários, leilões de gado e exposições de tecnologias voltadas ao agronegócio.
+        </p>
+
+        <h3>Conclusão</h3>
+        <p>
+            Seja no interior de São Paulo, no sertão goiano ou no coração de Minas Gerais, os rodeios são a oportunidade perfeita para celebrar a cultura rural do Brasil. A cada temporada, novos rodeios ganham força, mas os eventos já consagrados continuam a encantar gerações de brasileiros. Com uma mistura de esportes, música, gastronomia e cultura, os rodeios continuam a ser uma das maiores expressões da identidade do campo, e o Brasil segue sendo um dos maiores palcos de montarias do mundo.
+        </p>
+
+        <p>
+            Fique atento à programação e não perca a chance de viver essa experiência única!
         </p>
     </div>
 
@@ -156,13 +116,6 @@
             <a href="#">Política de Privacidade</a> |
             <a href="#">Contato</a>
         </p>
-
-        <!-- Ícones das redes sociais no rodapé -->
-        <div class="social-icons">
-            <a href="https://twitter.com" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
-            <a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a>
-            <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
-        </div>
     </div>
 
 </body>
