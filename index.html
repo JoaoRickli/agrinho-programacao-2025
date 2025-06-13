@@ -3,6 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #28a745; /* Cor verde */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
+            align-items: center;
+        }
+
+        .header img {
+            max-height: 50px; /* Ajuste do tamanho das imagens */
+        }
+
+        .header .entrar {
+            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
+        }
+
+        .entrar img {
+            width: 120px; /* Tamanho menor para o botão */
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .entrar img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção de conteúdo */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 20px; /* Aumentei o padding superior para dar mais altura */
+            flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #333; /* Cor de fundo escuro */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #28a745; /* Cor verde para links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seção Sobre Nós */
+        .about-us {
+            background-color: #e9ecef; /* Cor de fundo clara */
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .about-us h2 {
+            color: #28a745;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            line-height: 1.8;
+        }
+
+        /* Ícones no rodapé */
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+
+        .footer .social-icons img {
+            width: 25px; /* Tamanho menor */
+            height: 25px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .footer .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <div class="logo-slogan">
+            <img src="img/Logo.png" alt="Logo">
+            <img src="img/Slogan.png" alt="Slogan">
+        </div>
+        
+        <!-- Botão "Entrar" -->
+        <a href="#" class="entrar">
+            <img src="img/Entrar.png" alt="Entrar">
+        </a>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content">
+        <!-- A seção de imagens 1, 2, 3 e 4 foi removida -->
+    </div>
+
+    <!-- Seção Sobre Nós -->
+    <div class="about-us">
+        <h2>Sobre Nós</h2>
+        <p>
+            O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil. Com uma cobertura completa e atualizada, nosso site traz informações sobre feiras, congressos, workshops, palestras e outros eventos do universo agrícola que acontecem em todo o território nacional.
+        </p>
+        <p>
+            Se você é profissional do agro, empreendedor, estudante ou simplesmente tem interesse por inovação e sustentabilidade no campo, aqui é o lugar certo! O Agro Eventos oferece uma visão detalhada de cada evento, com programação, locais, palestrantes e detalhes para facilitar a sua participação.
+        </p>
+        <p>
+            Nosso objetivo é aproximar você das oportunidades que o setor agropecuário oferece, além de promover o networking e o compartilhamento de conhecimento entre profissionais de todas as áreas do agro. Se você quer ficar por dentro do que acontece no Brasil, o Agro Eventos é o seu ponto de encontro!
+        </p>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+        <p>
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Contato</a>
+        </p>
+
+        <!-- Ícones das redes sociais no rodapé -->
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodeios no Brasil</title>
     <style>
         body {
