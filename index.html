@@ -16,15 +16,29 @@
         .header {
             background-color: #28a745; /* Cor verde */
             color: white;
-            padding: 10px 0;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
             align-items: center;
-            gap: 15px;
         }
 
         .header img {
             max-height: 50px; /* Ajuste do tamanho das imagens */
+        }
+
+        .header .entrar {
+            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
+        }
+
+        .entrar img {
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .entrar img:hover {
+            transform: scale(1.05);
         }
 
         /* Seção de conteúdo */
@@ -40,11 +54,6 @@
             width: 50px;
             height: 50px;
             margin: 10px;
-        }
-
-        .entrar img {
-            width: 150px;
-            height: 50px;
         }
 
         /* Grid das imagens */
@@ -74,8 +83,15 @@
 
     <!-- Cabeçalho -->
     <div class="header">
-        <img src="img/Logo.png" alt="Logo">
-        <img src="img/Slogan.png" alt="Slogan">
+        <div class="logo-slogan">
+            <img src="img/Logo.png" alt="Logo">
+            <img src="img/Slogan.png" alt="Slogan">
+        </div>
+        
+        <!-- Botão "Entrar" -->
+        <a href="#" class="entrar">
+            <img src="img/Entrar.png" alt="Entrar">
+        </a>
     </div>
 
     <!-- Conteúdo -->
@@ -84,10 +100,6 @@
             <img src="img/Twitter.png" alt="Twitter">
             <img src="img/Instagram.png" alt="Instagram">
             <img src="img/Facebook.png" alt="Facebook">
-        </div>
-
-        <div class="entrar">
-            <img src="img/Entrar.png" alt="Entrar">
         </div>
 
         <div class="grid-images">
