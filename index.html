@@ -1,114 +1,193 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Cabeçalho */
-.header {
-    background-color: #28a745; /* Cor verde */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
-    align-items: center;
-    flex-wrap: wrap;
-}
+        /* Cabeçalho */
+        .header {
+            background-color: #28a745; /* Cor verde */
+            color: white;
+            padding: 20px 0; /* Aumentar o padding vertical */
+            width: 100%; /* Garantir que ocupe toda a largura da tela */
+            display: flex;
+            justify-content: space-between; /* Alinha logo + slogan à esquerda e 'Entrar' à direita */
+            align-items: center;
+            position: fixed; /* Fixar o cabeçalho no topo */
+            top: 0; /* Fixa na parte superior */
+            left: 0;
+            z-index: 1000; /* Coloca o cabeçalho acima dos outros elementos */
+        }
 
-.header img {
-    max-height: 50px; /* Ajuste do tamanho das imagens */
-}
+        .header img {
+            max-height: 50px; /* Ajuste do tamanho das imagens */
+        }
 
-.header .entrar {
-    margin-left: auto; /* Empurra o botão "Entrar" para a direita */
-}
+        .header .entrar {
+            margin-left: auto; /* Empurra o botão "Entrar" para a direita */
+        }
 
-.entrar img {
-    width: 120px; /* Tamanho menor para o botão */
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+        .entrar img {
+            width: 120px; /* Tamanho menor para o botão */
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
 
-.entrar img:hover {
-    transform: scale(1.05);
-}
+        .entrar img:hover {
+            transform: scale(1.05);
+        }
 
-.header .developer {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    color: white;
-    margin-top: 5px;
-}
+        .header .developer {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            margin-top: 5px;
+        }
 
-/* Seção de conteúdo */
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; /* Diminuir padding */
-    flex-grow: 1;
-}
+        /* Seção de conteúdo */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px 20px; /* Aumentar o padding superior para compensar o cabeçalho fixo */
+            flex-grow: 1;
+        }
 
-/* Seção Rodeios, Palestras e Sobre Nós */
-.section {
-    background-color: #e9ecef;
-    padding: 20px 15px; /* Menor padding */
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-    margin-top: 20px;
-}
+        /* Seção Rodeios, Palestras e Sobre Nós */
+        .section {
+            background-color: #e9ecef;
+            padding: 20px 15px; /* Menor padding */
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
 
-.section h2 {
-    color: #28a745; /* Verde para título */
-    font-size: 20px; /* Menor tamanho de título */
-    margin-bottom: 15px;
-}
+        .section h2 {
+            color: #28a745; /* Verde para título */
+            font-size: 20px; /* Menor tamanho de título */
+            margin-bottom: 15px;
+        }
 
-.section p {
-    line-height: 1.6; /* Reduzindo a altura da linha */
-}
+        .section p {
+            line-height: 1.6; /* Reduzindo a altura da linha */
+        }
 
-/* Rodapé */
-.footer {
-    background-color: #333; /* Cor de fundo escuro */
-    color: white;
-    text-align: center;
-    padding: 15px; /* Menor padding no rodapé */
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
+        /* Rodapé */
+        .footer {
+            background-color: #333; /* Cor de fundo escuro */
+            color: white;
+            text-align: center;
+            padding: 15px; /* Menor padding no rodapé */
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
 
-.footer a {
-    color: #28a745; /* Cor verde para links */
-    text-decoration: none;
-    margin: 0 10px;
-}
+        .footer a {
+            color: #28a745; /* Cor verde para links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
 
-.footer a:hover {
-    text-decoration: underline;
-}
+        .footer a:hover {
+            text-decoration: underline;
+        }
 
-/* Ícones no rodapé */
-.footer .social-icons {
-    margin-top: 15px;
-}
+        /* Ícones no rodapé */
+        .footer .social-icons {
+            margin-top: 15px;
+        }
 
-.footer .social-icons img {
-    width: 20px; /* Tamanho menor dos ícones */
-    height: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+        .footer .social-icons img {
+            width: 20px; /* Tamanho menor dos ícones */
+            height: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
 
-.footer .social-icons img:hover {
-    transform: scale(1.2);
-}
+        .footer .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <div class="logo-slogan">
+            <img src="img/Logo.png" alt="Logo">
+            <img src="img/Slogan.png" alt="Slogan">
+        </div>
+        
+        <!-- Botão "Entrar" -->
+        <a href="#" class="entrar">
+            <img src="img/Entrar.png" alt="Entrar">
+        </a>
+    </div>
+
+    <!-- Texto de Desenvolvedor -->
+    <div class="header developer">
+        <p>Desenvolvido por João Pedro Sperafico Rickli</p>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content">
+        <!-- Seção Rodeios -->
+        <div class="section">
+            <h2>Rodeios</h2>
+            <p>
+                Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo.
+            </p>
+        </div>
+
+        <!-- Seção Palestras -->
+        <div class="section">
+            <h2>Palestras</h2>
+            <p>
+                O agronegócio brasileiro é um dos maiores pilares da economia nacional, e, para manter-se competitivo e inovador, é fundamental que os profissionais da área busquem constante atualização e aprendizado.
+            </p>
+        </div>
+
+        <!-- Seção Sobre Nós -->
+        <div class="section">
+            <h2>Sobre Nós</h2>
+            <p>
+                O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil, com informações sobre feiras, congressos, workshops, palestras e outros eventos.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+        <p>
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Contato</a>
+        </p>
+
+        <!-- Ícones das redes sociais no rodapé -->
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank"><img src="img/Twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/Instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank"><img src="img/Facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+</body>
+</html>
