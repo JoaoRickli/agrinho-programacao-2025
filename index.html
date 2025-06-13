@@ -8,30 +8,38 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #28a745; /* Cor verde */
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header img {
+            max-height: 50px; /* Ajuste do tamanho das imagens */
+        }
+
+        /* Seção de conteúdo */
+        .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
 
-        img {
-            margin: 10px;
-            max-width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
-        .logo {
-            max-width: 200px;
-        }
-
+        /* Imagens de redes sociais */
         .social-icons img {
             width: 50px;
             height: 50px;
+            margin: 10px;
         }
 
         .entrar img {
@@ -39,6 +47,7 @@
             height: 50px;
         }
 
+        /* Grid das imagens */
         .grid-images {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -62,24 +71,32 @@
     </style>
 </head>
 <body>
-    <img class="logo" src="img/Logo.png" alt="Logo">
-    <img class="slogan" src="img/Slogan.png" alt="Slogan">
-    
-    <div class="social-icons">
-        <img src="img/Twitter.png" alt="Twitter">
-        <img src="img/Instagram.png" alt="Instagram">
-        <img src="img/Facebook.png" alt="Facebook">
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <img src="img/Logo.png" alt="Logo">
+        <img src="img/Slogan.png" alt="Slogan">
     </div>
-    
-    <div class="entrar">
-        <img src="img/Entrar.png" alt="Entrar">
+
+    <!-- Conteúdo -->
+    <div class="content">
+        <div class="social-icons">
+            <img src="img/Twitter.png" alt="Twitter">
+            <img src="img/Instagram.png" alt="Instagram">
+            <img src="img/Facebook.png" alt="Facebook">
+        </div>
+
+        <div class="entrar">
+            <img src="img/Entrar.png" alt="Entrar">
+        </div>
+
+        <div class="grid-images">
+            <img src="img/1.png" alt="Imagem 1">
+            <img src="img/2.png" alt="Imagem 2">
+            <img src="img/3.png" alt="Imagem 3">
+            <img src="img/4.png" alt="Imagem 4">
+        </div>
     </div>
-    
-    <div class="grid-images">
-        <img src="img/1.png" alt="Imagem 1">
-        <img src="img/2.png" alt="Imagem 2">
-        <img src="img/3.png" alt="Imagem 3">
-        <img src="img/4.png" alt="Imagem 4">
-    </div>
+
 </body>
 </html>
