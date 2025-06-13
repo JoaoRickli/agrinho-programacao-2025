@@ -10,7 +10,6 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -58,71 +57,29 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 80px 20px; /* Aumentei o padding superior para dar mais altura */
-            flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
+            padding: 20px; /* Diminuir padding */
+            flex-grow: 1;
         }
 
-        /* Seção Rodeios */
-        .rodeios {
-            background-color: #e9ecef; /* Cor de fundo clara */
-            padding: 40px 20px;
+        /* Seção Rodeios, Palestras e Sobre Nós */
+        .section {
+            background-color: #e9ecef;
+            padding: 20px 15px; /* Menor padding */
             width: 100%;
             text-align: center;
             font-size: 16px;
             color: #333;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
-        .rodeios h2 {
+        .section h2 {
             color: #28a745; /* Verde para título */
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 20px; /* Menor tamanho de título */
+            margin-bottom: 15px;
         }
 
-        .rodeios p {
-            line-height: 1.8;
-        }
-
-        /* Seção Palestras */
-        .palestras {
-            background-color: #e9ecef; /* Cor de fundo clara */
-            padding: 40px 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            color: #333;
-            margin-top: 40px;
-        }
-
-        .palestras h2 {
-            color: #28a745; /* Verde para título */
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .palestras p {
-            line-height: 1.8;
-        }
-
-        /* Seção Sobre Nós */
-        .about-us {
-            background-color: #e9ecef; /* Cor de fundo clara */
-            padding: 40px 20px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            color: #333;
-            margin-top: 40px;
-        }
-
-        .about-us h2 {
-            color: #28a745;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .about-us p {
-            line-height: 1.8;
+        .section p {
+            line-height: 1.6; /* Reduzindo a altura da linha */
         }
 
         /* Rodapé */
@@ -130,11 +87,10 @@
             background-color: #333; /* Cor de fundo escuro */
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px; /* Menor padding no rodapé */
             position: relative;
             width: 100%;
             bottom: 0;
-            margin-top: 40px;
         }
 
         .footer a {
@@ -149,13 +105,13 @@
 
         /* Ícones no rodapé */
         .footer .social-icons {
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .footer .social-icons img {
-            width: 25px; /* Tamanho menor */
-            height: 25px;
-            margin: 0 15px;
+            width: 20px; /* Tamanho menor dos ícones */
+            height: 20px;
+            margin: 0 10px;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -187,40 +143,29 @@
 
     <!-- Conteúdo -->
     <div class="content">
-        <!-- A seção de imagens 1, 2, 3 e 4 foi removida -->
-    </div>
+        <!-- Seção Rodeios -->
+        <div class="section">
+            <h2>Rodeios</h2>
+            <p>
+                Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo.
+            </p>
+        </div>
 
-    <!-- Seção Rodeios -->
-    <div class="rodeios">
-        <h2>Rodeios</h2>
-        <p>
-            Os rodeios são muito mais do que um simples evento esportivo; são uma verdadeira celebração da cultura sertaneja, da bravura dos peões e da força do campo. No Brasil, essa tradição está profundamente enraizada, refletindo a paixão por cavalos, bois e pela vida no interior, onde coragem e habilidade se encontram em um espetáculo emocionante que atrai milhares de pessoas a cada temporada.
-        </p>
-        <p>
-            Com uma agenda repleta de rodeios, o Brasil se transforma em um grande palco de adrenalina e emoção, onde as montarias em touros e cavalos são apenas a ponta do iceberg. Além das competições, esses eventos são uma festa de confraternização, música, danças típicas e gastronomia, criando uma atmosfera vibrante que reúne toda a família. O rodeio é, sem dúvida, uma das expressões mais autênticas da cultura brasileira, unindo tradição e modernidade em cada cidade que recebe essas grandes festas.
-        </p>
-    </div>
+        <!-- Seção Palestras -->
+        <div class="section">
+            <h2>Palestras</h2>
+            <p>
+                O agronegócio brasileiro é um dos maiores pilares da economia nacional, e, para manter-se competitivo e inovador, é fundamental que os profissionais da área busquem constante atualização e aprendizado.
+            </p>
+        </div>
 
-    <!-- Seção Palestras -->
-    <div class="palestras">
-        <h2>Palestras</h2>
-        <p>
-            O agronegócio brasileiro é um dos maiores pilares da economia nacional, e, para manter-se competitivo e inovador, é fundamental que os profissionais da área busquem constante atualização e aprendizado. Nesse cenário, as palestras do agronegócio desempenham um papel essencial. Elas oferecem uma oportunidade única para discutir as tendências, inovações tecnológicas, práticas sustentáveis e desafios enfrentados pelo setor. Além disso, são um ponto de encontro para profissionais, empresários, pesquisadores e especialistas que desejam compartilhar conhecimentos e experiências, contribuindo para o fortalecimento de um dos maiores segmentos econômicos do Brasil.
-        </p>
-    </div>
-
-    <!-- Seção Sobre Nós -->
-    <div class="about-us">
-        <h2>Sobre Nós</h2>
-        <p>
-            O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil. Com uma cobertura completa e atualizada, nosso site traz informações sobre feiras, congressos, workshops, palestras e outros eventos do universo agrícola que acontecem em todo o território nacional.
-        </p>
-        <p>
-            Se você é profissional do agro, empreendedor, estudante ou simplesmente tem interesse por inovação e sustentabilidade no campo, aqui é o lugar certo! O Agro Eventos oferece uma visão detalhada de cada evento, com programação, locais, palestrantes e detalhes para facilitar a sua participação.
-        </p>
-        <p>
-            Nosso objetivo é aproximar você das oportunidades que o setor agropecuário oferece, além de promover o networking e o compartilhamento de conhecimento entre profissionais de todas as áreas do agro. Se você quer ficar por dentro do que acontece no Brasil, o Agro Eventos é o seu ponto de encontro!
-        </p>
+        <!-- Seção Sobre Nós -->
+        <div class="section">
+            <h2>Sobre Nós</h2>
+            <p>
+                O Agro Eventos é o seu portal de referência para os principais acontecimentos do setor agropecuário no Brasil, com informações sobre feiras, congressos, workshops, palestras e outros eventos.
+            </p>
+        </div>
     </div>
 
     <!-- Rodapé -->
